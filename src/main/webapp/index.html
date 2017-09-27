@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The bestest Quiz on the Internet</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script defer src="js/semantic.min.js"></script>
+        <script defer src="js/quizTable.js"></script>
+        <script defer src="js/javascript.js"></script>
+    </head>
+
+    <body>
+    <div class="ui container">
+        <h1 class="ui blue huge header centered">The Great Quizby</h1>
+        <div class="ui divider"></div>
+
+        <!--Quiz List BEGIN-->
+        <table class="ui blue table">
+            <thead>
+                <tr>
+                    <th><h1 class="ui blue medium header">Quiz Title</h1></th>
+                    <th><h1 class="ui blue medium header">Start Time</h1></th>
+                    <th><h1 class="ui blue medium header">Actions</h1></th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            <!-- NEW QUIZZES WILL APPEAR HERE -->
+            </tbody>
+        </table>
+        <!--Quiz List END-->
+
+        <div id="buttonCreateQuiz" class="ui primary button">Create a quiz</div>
+    </div>
+
+    <!--Create Quiz Modal BEGIN-->
+    <div class="ui modal">
+        <i class="close icon"></i>
+        <h2 class="ui horizontal divider header">Quiz</h2>
+        <div class="ui scrolling content">
+            <form class="ui form">
+                <div class="two fields">
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="icon font"></i>
+                            <input id="inputQuizTitle" type="text" placeholder="Quiz Title">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="icon calendar"></i>
+                            <input id="inputQuizStart" class="fieldStartTime" type="datetime-local">
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="ui horizontal divider header">Questions</h3>
+                <div id="addQuestionsBox">
+                    <!--ADDED QUESTIONS WILL COME HERE-->
+                </div>
+            </form>
+        </div>
+
+        <div class="actions">
+            <button id="addQuestionButton" class="ui blue circular icon button">
+                <i class="plus icon"></i>
+                Add question
+            </button>
+            <div class="ui black deny button">
+                Nope
+            </div>
+            <div id="buttonSaveQuiz" class="ui positive right labeled icon button">
+                Save
+                <i class="checkmark icon"></i>
+            </div>
+        </div>
+    </div>
+    <!--Create Quiz Modal END-->
+    </body>
+</html>
